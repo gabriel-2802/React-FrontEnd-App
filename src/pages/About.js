@@ -1,8 +1,20 @@
 import React from 'react'
 import Napoleon from '../assets/napoleon3.jpg'
 import '../styles/About.css'
+import LoadingAnimation from '../components/LoadingAnimation'
 
 function About() {
+	const [loading, setLoading] = React.useState(true)
+	React.useEffect(() => {
+		setTimeout(() => {
+			setLoading(false)
+		}, 150)
+	}, []);
+
+	if (loading) {
+		return <LoadingAnimation />
+	}
+
   return (
 	<div className='about'>
 		<div className='aboutTop' style={{backgroundImage:`url(${Napoleon})`}}>

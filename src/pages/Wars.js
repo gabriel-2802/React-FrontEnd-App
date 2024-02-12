@@ -2,6 +2,7 @@ import React from 'react'
 import Photo from '../assets/war-photo.jpg'
 import WarInfo from '../components/WarInfo';
 import '../styles/Wars.css'
+import LoadingAnimation from '../components/LoadingAnimation'
 
 const WarsList = [
     {
@@ -57,6 +58,16 @@ const WarsList = [
 
 
 function Wars() {
+    const [loading, setLoading] = React.useState(true)
+    React.useEffect(() => {
+      setTimeout(() => {
+        setLoading(false)
+      }, 150)
+    }, []);
+  
+    if (loading) {
+      return <LoadingAnimation />
+    }
   return (
     <div className='wars'>
         <h1 className='warsTitle'> Napolenic Wars </h1>

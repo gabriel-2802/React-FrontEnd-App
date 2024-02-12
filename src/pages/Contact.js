@@ -1,8 +1,19 @@
 import React from 'react'
 import Napoleon from "../assets/napoleon.jpg"
 import "../styles/Contact.css"
+import LoadingAnimation from '../components/LoadingAnimation'
 
 function Contact() {
+  const [loading, setLoading] = React.useState(true)
+  React.useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    }, 150)
+  }, []);
+
+  if (loading) {
+    return <LoadingAnimation />
+  }
   return (
     <div className='contact'>
         <div className='leftSide'

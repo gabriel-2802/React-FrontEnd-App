@@ -15,7 +15,11 @@
     font-size: 30px;
     cursor: pointer;
     text-decoration: none;
+  }
 
+  .socialMedia a:hover {
+    color: orange;
+    text-decoration: underline;
   }
   
   .footer p {

@@ -2,8 +2,21 @@ import React from 'react'
 import {Link } from 'react-router-dom'
 import Banner from '../assets/home.avif'
 import '../styles/Home.css'
+import LoadingAnimation from '../components/LoadingAnimation'
 
 function Home() {
+	const [loading, setLoading] = React.useState(true)
+	React.useEffect(() => {
+		setTimeout(() => {
+			setLoading(false)
+		}, 150)
+
+	}, []);
+
+	if (loading) {
+		return <LoadingAnimation />
+	}
+
   return (
 	<div>
 		<div className='home' style ={{backgroundImage: `url(${Banner})`}}>
