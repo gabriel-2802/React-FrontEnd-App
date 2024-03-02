@@ -1,9 +1,11 @@
 ## Napoleon Info WebSite
 
-### General Notes:
-* the project only uses front end
-* made using `React`
+* A front-end website about the Napoleonic Wars
+* An introduction to React 
 
+### Tehnologies Used:
+* CSS for styling
+* React Application
 
 ### Photos:
 ![website pictures](readme_photos/Screenshot%20(83).png)
